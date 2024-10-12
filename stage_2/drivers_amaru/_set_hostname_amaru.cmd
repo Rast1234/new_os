@@ -1,0 +1,1 @@
+wmic computersystem where name="%COMPUTERNAME%" rename "amaru"

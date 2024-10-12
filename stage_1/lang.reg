@@ -1,0 +1,10 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Keyboard Layout\Toggle]
+"Hotkey"="4"
+"Language Hotkey"="4"
+"Layout Hotkey"="2"
+
+; part of capslock hack
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout]
+"Scancode Map"=hex:00,00,00,00,00,00,00,00,04,00,00,00,29,00,3a,00,3a,00,46,00,56,00,29,00,00,00,00,00

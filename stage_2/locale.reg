@@ -1,0 +1,13 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Control Panel\International]
+"sDate"="-"
+"sLongDate"="ddd, d MMM y"
+"sShortDate"="yyyy-MM-dd"
+"sTimeFormat"="HH:mm:ss"
+"sShortTime"="HH:mm"
+"iDate"="2"
+"iFirstDayOfWeek"="0"
+"iMeasure"="0"
+"iTime"="1"
+"iTLZero"="1"

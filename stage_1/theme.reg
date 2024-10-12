@@ -1,0 +1,32 @@
+Windows Registry Editor Version 5.00
+
+; dark theme
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize]
+"AppsUseLightTheme"=dword:00000000
+"SystemUsesLightTheme"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize]
+"AppsUseLightTheme"=dword:00000000
+"SystemUsesLightTheme"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize]
+"ColorPrevalence"=dword:00000001
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\DWM]
+"AccentColor"=dword:ff1050ca
+"AlwaysHibernateThumbnails"=dword:00000000
+"ColorizationAfterglow"=dword:c4ca5010
+"ColorizationAfterglowBalance"=dword:0000000a
+"ColorizationColor"=dword:c4ca5010
+"ColorizationColorBalance"=dword:00000059
+"ColorizationGlassAttribute"=dword:00000001
+"ColorPrevalence"=dword:00000001
+"Composition"=dword:00000001
+"ColorizationBlurBalance"=dword:00000001
+"EnableAeroPeek"=dword:00000001
+"EnableWindowColorization"=dword:00000001
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Accent]
+"AccentColorMenu"=dword:ff1050ca
+"AccentPalette"=hex:ff,94,3e,00,f2,81,30,00,e8,6f,2e,00,ca,50,10,00,95,3b,0c,00,72,2d,09,00,50,20,06,00,52,5e,54,00
+"StartColorMenu"=dword:ff0c3b95

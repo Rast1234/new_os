@@ -29,6 +29,9 @@ mkdir c:\vault
 echo "=== Populating C:\bin ==="
 ./add_bin_and_copy.ps1
 
+echo "=== Creating scheduled tasks ==="
+./add_startup_tasks.ps1
+
 echo "=== Configuring power profiles ==="
 ./power.ps1
 

@@ -36,5 +36,10 @@ fsutil behavior set DisableLastAccess 1
 fsutil behavior set EncryptPagingFile 0
 # privacy
 Set-WindowsSearchSetting -EnableWebResultsSetting $false
+# disable password expiry for all users
+wmic UserAccount set PasswordExpires=False
+# nuke annoying update checker
+Get-Process updatechecker|Stop-Process
+Remove-Item -Path "C:\Program Files\MiniTool Partition Wizard 12\updatechecker.exe" -Force
 
 echo "=== Done! ==="

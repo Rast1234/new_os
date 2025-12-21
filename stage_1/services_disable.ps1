@@ -29,6 +29,7 @@ $services = @(
     "WpcMonSvc"
     "WerSvc"
     "wisvc"
+    "BTAGService"  # bluetooth handsfree profile (bad audio mode support for all bt headphones)
 
     # Services which cannot be disabled:
     #"WdNisSvc"

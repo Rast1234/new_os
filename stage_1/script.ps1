@@ -48,6 +48,9 @@ Set-WindowsSearchSetting -EnableWebResultsSetting $false
 echo "=== Disabling services ==="
 ./services_disable.ps1
 
+echo "=== Preventing Playstation gamepad wired sound device installation ==="
+reg import prevent_devices.reg
+
 echo "=== Disabling telemetry tasks ==="
 ./tasks_disable.ps1
 

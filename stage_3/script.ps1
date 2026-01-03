@@ -41,5 +41,15 @@ wmic UserAccount set PasswordExpires=False
 # nuke annoying update checker
 Get-Process updatechecker|Stop-Process
 Remove-Item -Path "C:\Program Files\MiniTool Partition Wizard 12\updatechecker.exe" -Force
+# nuke annoying nefarius update checkers
+$tasks = @(
+    "nefarius_BthPS3_Updater"
+    "nefarius_DsHidMini_Updater"
+    "nefarius_HidHide_Updater"
+)
+
+foreach ($task in $tasks) {
+   Disable-ScheduledTask -TaskName $task
+}
 
 echo "=== Done! ==="

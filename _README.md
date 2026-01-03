@@ -34,4 +34,5 @@ Device- and machine-specific drivers should be installed on a corresponding mach
 * rider settings
 * display modes control?
 * review and refactor scripts
-* disable devices: ds4/ds5 audio, bluetooth headset
+* RTSS settings, overlays, hotkeys
+* prom-hwinfo-grafana stack

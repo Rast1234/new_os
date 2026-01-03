@@ -24,6 +24,9 @@ choco install choco_problematic_packages.config
 echo "=== Set edit with Notepad++ ==="
 reg import edit_with_npp.reg
 
+echo "=== Disable Epic Games overlay ==="
+reg import epic_overlay_block.reg
+
 echo "=== Pinning taskbar defaults ==="
 ./start_taskbar_pin.ps1
 

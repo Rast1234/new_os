@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\EOSOverlayRenderer-Win64-Shipping.exe]
+"Debugger"="systray.exe"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\EOSOverlayRenderer-Win32-Shipping.exe]
+"Debugger"="systray.exe"

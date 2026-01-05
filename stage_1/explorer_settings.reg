@@ -176,6 +176,7 @@ Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer]
 "AllowOnlineTips"=dword:00000000
+"HideSCAMeetNow"=dword:00000001
 
 ; fix annoying virtual folders to always display physical paths
 ; https://superuser.com/questions/1205462/display-full-path-to-user-items-in-file-explorer-address-bar

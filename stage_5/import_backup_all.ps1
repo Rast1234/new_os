@@ -3,7 +3,6 @@
 $ErrorActionPreference = "Stop"
 
 $src="root"
-$user="rast"
 
 Copy-Item -Path  "$src/*" -Destination "C:/" -Recurse
 reg import registry/ProcessExplorer.reg

@@ -2,29 +2,54 @@
 
 $ErrorActionPreference = "Stop"
 
-New-Item -ItemType Directory root
-
-$src="E:/legion_root"
+#$src="E:/legion_root"
+$src="C:"
+$dst = "root"
 $user="rast"
 
-# folders
-Copy-Item -Path "$src/Users/$user/AppData/Roaming/Notepad++" -Destination "root/Users/$user/AppData/Roaming/Notepad++" -Recurse
-Copy-Item -Path "$src/Users/$user/AppData/Roaming/AIMP" -Destination "root/Users/$user/AppData/Roaming/AIMP" -Recurse
-Copy-Item -Path "$src/Users/$user/AppData/Roaming/FileZilla" -Destination "root/Users/$user/AppData/Roaming/FileZilla" -Recurse
-Copy-Item -Path "$src/Users/$user/AppData/Roaming/DS4Windows" -Destination "root/Users/$user/AppData/Roaming/DS4Windows" -Recurse
-Copy-Item -Path "$src/Users/$user/AppData/Roaming/qBittorrent" -Destination "root/Users/$user/AppData/Roaming/qBittorrent" -Recurse
-Copy-Item -Path "$src/Users/$user/AppData/Roaming/Code" -Destination "root/Users/$user/AppData/Roaming/Code" -Recurse
-Copy-Item -Path "$src/Users/$user/AppData/Roaming/XnViewMP" -Destination "root/Users/$user/AppData/Roaming/XnViewMP" -Recurse
-Copy-Item -Path "$src/Users/$user/AppData/Roaming/doublecmd" -Destination "root/Users/$user/AppData/Roaming/doublecmd" -Recurse
-Copy-Item -Path "$src/Users/$user/AppData/Roaming/vlc" -Destination "root/Users/$user/AppData/Roaming/vlc" -Recurse
+New-Item -ItemType Directory $dst
 
-Copy-Item -Path "$src/Users/$user/AppData/Local/GOG.com" -Destination "root/Users/$user/AppData/Local/GOG.com" -Recurse
-Copy-Item -Path "$src/Users/$user/AppData/Local/qBittorrent" -Destination "root/Users/$user/AppData/Local/qBittorrent" -Recurse
+function CopyStuff {
+    param ($path)
+    $from = "$src/$path"
+    $isDir = (Get-Item $from) -is [System.IO.DirectoryInfo]
+    if($isDir){
+        $to = "$dst/$path"
+        echo "copy path $from -- $to"
+        Copy-Item -Path $from -Destination $to -Recurse
+    }
+    else{
+        $to = split-path "$dst/$path"
+        echo "copy file $from -- $to"
+        New-Item -ItemType Directory -Path $to -Force | Out-Null
+        Copy-Item -Path $from -Destination $to
+    }
+    
+}
 
-Copy-Item -Path "$src/Users/$user/Documents/ShareX" -Destination "root/Users/$user/Documents/ShareX" -Recurse
-Copy-Item -Path "$src/Users/$user/.ssh" -Destination "root/Users/$user/.ssh" -Recurse
-Copy-Item -Path "$src/Users/$user/.vscode" -Destination "root/Users/$user/.vscode" -Recurse
-Copy-Item -Path "$src/Program Files (x86)/Steam/config" -Destination "root/Program Files (x86)/Steam/config" -Recurse
+CopyStuff("Users/$user/AppData/Local/qBittorrent")
+CopyStuff("Users/$user/AppData/Roaming/Notepad++")
+CopyStuff("Users/$user/AppData/Roaming/AIMP")
+CopyStuff("Users/$user/AppData/Roaming/FileZilla")
+CopyStuff("Users/$user/AppData/Roaming/DS4Windows")
+CopyStuff("Users/$user/AppData/Roaming/qBittorrent")
+CopyStuff("Users/$user/AppData/Roaming/Code")
+CopyStuff("Users/$user/AppData/Roaming/XnViewMP")
+CopyStuff("Users/$user/AppData/Roaming/doublecmd")
+CopyStuff("Users/$user/AppData/Roaming/vlc")
+CopyStuff("Users/$user/Documents/ShareX")
+CopyStuff("Users/$user/.ssh")
+CopyStuff("Users/$user/.vscode")
+CopyStuff("Users/$user/.gitconfig")
+CopyStuff("ProgramData/PromDapter/Prometheusmapping.yaml")
+CopyStuff("Program Files/HWiNFO64/HWiNFO64.EXE")
+CopyStuff("Program Files/HWiNFO64/HWiNFO64.INI")
+CopyStuff("Program Files/PromDapter")
+CopyStuff("Program Files/prometheus/prometheus.exe")
+CopyStuff("Program Files/prometheus/prometheus.yml")
+CopyStuff("Program Files (x86)/Steam/config")
+CopyStuff("Program Files (x86)/RivaTuner Statistics Server/Profiles")
+CopyStuff("Program Files (x86)/RivaTuner Statistics Server/Plugins/Client/Overlays/_details.ovl")
+CopyStuff("Program Files (x86)/RivaTuner Statistics Server/Plugins/Client/Overlays/_fps.ovl")
+CopyStuff("Program Files/GrafanaLabs/grafana/data/grafana.db")
 
-# files
-Copy-Item -Path "$src/Users/$user/.gitconfig" -Destination "root/Users/$user" -Recurse

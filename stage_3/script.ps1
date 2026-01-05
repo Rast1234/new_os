@@ -24,8 +24,12 @@ choco install choco_problematic_packages.config
 echo "=== Set edit with Notepad++ ==="
 reg import edit_with_npp.reg
 
-echo "=== Disable Epic Games overlay ==="
-reg import epic_overlay_block.reg
+echo "=== Block apps by name ==="
+reg import block_apps_by_name.reg
+
+echo "=== Making steam run silently from url ==="
+reg import steam_run_slient.reg
+./steam_reg_acl.ps1
 
 echo "=== Pinning taskbar defaults ==="
 ./start_taskbar_pin.ps1
@@ -54,5 +58,8 @@ $tasks = @(
 foreach ($task in $tasks) {
    Disable-ScheduledTask -TaskName $task
 }
+
+echo "=== install NSSM-managed services ==="
+./nssm.ps1
 
 echo "=== Done! ==="

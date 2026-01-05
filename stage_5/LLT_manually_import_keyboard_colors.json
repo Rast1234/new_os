@@ -1,0 +1,208 @@
+[
+  {
+    "Type": "Always",
+    "Speed": "None",
+    "Direction": "None",
+    "ClockwiseDirection": "None",
+    "Colors": [
+      {
+        "R": 0,
+        "G": 52,
+        "B": 18
+      }
+    ],
+    "Keys": [
+      157,
+      156,
+      159,
+      161
+    ]
+  },
+  {
+    "Type": "Always",
+    "Speed": "None",
+    "Direction": "None",
+    "ClockwiseDirection": "None",
+    "Colors": [
+      {
+        "R": 1,
+        "G": 0,
+        "B": 61
+      }
+    ],
+    "Keys": [
+      128,
+      38
+    ]
+  },
+  {
+    "Type": "RainbowWave",
+    "Speed": "Speed1",
+    "Direction": "TopToBottom",
+    "ClockwiseDirection": "None",
+    "Colors": [],
+    "Keys": [
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      109,
+      110,
+      88,
+      89,
+      90,
+      113,
+      114,
+      91,
+      92,
+      93,
+      95,
+      130,
+      131,
+      111,
+      112,
+      135,
+      136,
+      115,
+      116,
+      117,
+      152
+    ]
+  },
+  {
+    "Type": "Always",
+    "Speed": "None",
+    "Direction": "None",
+    "ClockwiseDirection": "None",
+    "Colors": [
+      {
+        "R": 39,
+        "G": 5,
+        "B": 0
+      }
+    ],
+    "Keys": [
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      79,
+      80,
+      81,
+      121,
+      123,
+      124,
+      142,
+      144,
+      146,
+      163
+    ]
+  },
+  {
+    "Type": "Always",
+    "Speed": "None",
+    "Direction": "None",
+    "ClockwiseDirection": "None",
+    "Colors": [
+      {
+        "R": 91,
+        "G": 40,
+        "B": 0
+      }
+    ],
+    "Keys": [
+      22,
+      33,
+      34,
+      78,
+      118,
+      39,
+      40,
+      41,
+      104
+    ]
+  },
+  {
+    "Type": "Always",
+    "Speed": "None",
+    "Direction": "None",
+    "ClockwiseDirection": "None",
+    "Colors": [
+      {
+        "R": 0,
+        "G": 52,
+        "B": 2
+      }
+    ],
+    "Keys": [
+      1,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      56,
+      64,
+      85,
+      119,
+      106,
+      141,
+      127,
+      150,
+      151,
+      154,
+      155,
+      167,
+      165
+    ]
+  },
+  {
+    "Type": "Smooth",
+    "Speed": "Speed1",
+    "Direction": "None",
+    "ClockwiseDirection": "None",
+    "Colors": [
+      {
+        "R": 55,
+        "G": 3,
+        "B": 0
+      }
+    ],
+    "Keys": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      501,
+      502,
+      503,
+      504,
+      505,
+      506
+    ]
+  }
+]

@@ -29,6 +29,7 @@ Device- and machine-specific drivers should be installed on a corresponding mach
 
 ## TODO automate stuff
 
+* file associations didnt work?
 * drop-down quake terminal?
 	* ???
 * rider settings
@@ -36,3 +37,9 @@ Device- and machine-specific drivers should be installed on a corresponding mach
 * review and refactor scripts
 * RTSS settings, overlays, hotkeys
 * prom-hwinfo-grafana stack
+* promdapter install
+* nuke meet / meetnow
+* LLT/HWinfo/RTSS startup order or delay?
+* lock screen 
+  * caps lang switch
+  * set eng as default lang

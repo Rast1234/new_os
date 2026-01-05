@@ -1,1 +1,1 @@
-CreateObject("Wscript.Shell").Run("powershell -windowstyle hidden -noninteractive -command "" if(-not [console]::NumberLock){(New-Object -ComObject WScript.Shell).SendKeys('{NUMLOCK}'); } "" "),0
+CreateObject("Wscript.Shell").Run("powershell -windowstyle hidden -noninteractive -command "" while(-not [console]::NumberLock){(New-Object -ComObject WScript.Shell).SendKeys('{NUMLOCK}'); } "" "),0

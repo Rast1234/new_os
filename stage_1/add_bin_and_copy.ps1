@@ -12,4 +12,4 @@ if(! $current.contains($bin)){
     # PS won't see new path until restart
 }
 
-copy-item "./bin/*" $bin
+copy-item "./bin/*" $bin -Recurse

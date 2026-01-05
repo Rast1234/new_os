@@ -2,10 +2,12 @@
 
 $ErrorActionPreference = "Stop"
 
-#$src="E:/legion_root"
-$src="C:"
+$src="E:/legion_root"
 $dst = "root"
-$user="rast"
+$user=$env:username
+
+echo "Will copy known appsettings and useful files from [$src] to [$dst], assuming previous username was [$user]"
+echo "If something fails, check and edit script. Also delete destination folder [$dst] to start over"
 
 New-Item -ItemType Directory $dst
 

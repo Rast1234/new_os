@@ -37,6 +37,9 @@ echo "=== Pinning taskbar defaults ==="
 echo "=== Setting wallpaper ==="
 ./wallpaper.ps1
 
+echo "=== Setting lockscreen ==="
+./lockscreen.ps1
+
 echo "=== Running other tweaks ==="
 # SSD life improvement
 fsutil behavior set DisableLastAccess 1

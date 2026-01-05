@@ -16,16 +16,19 @@ Device- and machine-specific drivers should be installed on a corresponding mach
 * click through all installers
 * chrome login
 * ms store login
-* gog: copy plugins to appdata, login to all profiles manually
 * move taskbar left, also in all desktop modes
-* discord: login, disable game status monitoring, add hotkey: mute on break
-* steam: login, check if config applied, change library path, disable notifications, disable toasts
+* discord: check if settings backup works. login, disable game status monitoring, hotkey "mute on break"
+* steam: login, check if config applied, change library path, check millenium
 * sharex: configure shell extension
 * 7zip: shell extension
 * aimp: shell extension
 * xnview: shell extension
-* ds4windows: run through wizard, install drivers, setup hidhide
+* ds4windows
+  * run through wizard
+  * install drivers
+  * setup hidhide: apps tab = no changes, devices tab = tick (hide) all HID-compliant game controller
 * peace/equalizerapo: set up devices
+* prom-hwinfo-grafana-promdapter stack: check that everything is up
 
 ## TODO automate stuff
 
@@ -34,12 +37,4 @@ Device- and machine-specific drivers should be installed on a corresponding mach
 	* ???
 * rider settings
 * display modes control?
-* review and refactor scripts
-* RTSS settings, overlays, hotkeys
-* prom-hwinfo-grafana stack
-* promdapter install
-* nuke meet / meetnow
 * LLT/HWinfo/RTSS startup order or delay?
-* lock screen 
-  * caps lang switch
-  * set eng as default lang

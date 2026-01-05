@@ -30,6 +30,8 @@ function CopyStuff {
 CopyStuff("Users/$user/AppData/Local/qBittorrent")
 CopyStuff("Users/$user/AppData/Roaming/Notepad++")
 CopyStuff("Users/$user/AppData/Roaming/AIMP")
+CopyStuff("Users/$user/AppData/Roaming/discord/settings.json")
+CopyStuff("Users/$user/AppData/Roaming/discord/Local Storage")
 CopyStuff("Users/$user/AppData/Roaming/FileZilla")
 CopyStuff("Users/$user/AppData/Roaming/DS4Windows")
 CopyStuff("Users/$user/AppData/Roaming/qBittorrent")

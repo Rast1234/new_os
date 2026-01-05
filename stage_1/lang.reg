@@ -8,3 +8,20 @@ Windows Registry Editor Version 5.00
 ; part of capslock hack
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout]
 "Scancode Map"=hex:00,00,00,00,00,00,00,00,04,00,00,00,29,00,3a,00,3a,00,46,00,56,00,29,00,00,00,00,00
+
+
+; lock screen
+; set only english input at lock screen, delete other input methods, and ignore user settings
+
+[-HKEY_USERS\.DEFAULT\Keyboard Layout\Preload]
+
+[HKEY_USERS\.DEFAULT\Keyboard Layout\Preload]
+"1"="00000409"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Control Panel\International]
+"BlockUserInputMethodsForSignIn"=dword:00000001
+
+[HKEY_USERS\.DEFAULT\Keyboard Layout\Toggle]
+"Hotkey"="4"
+"Language Hotkey"="4"
+"Layout Hotkey"="2"

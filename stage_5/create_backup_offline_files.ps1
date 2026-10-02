@@ -2,7 +2,8 @@
 
 $ErrorActionPreference = "Stop"
 
-$src="E:/legion_root"
+$src="C:"
+#$src="E:/legion_root"
 $dst = "root"
 $user=$env:username
 
@@ -53,7 +54,11 @@ CopyStuff("Program Files/prometheus/prometheus.exe")
 CopyStuff("Program Files/prometheus/prometheus.yml")
 CopyStuff("Program Files (x86)/Steam/config")
 CopyStuff("Program Files (x86)/RivaTuner Statistics Server/Profiles")
+CopyStuff("Program Files (x86)/RivaTuner Statistics Server/ProfileTemplates/Config")
 CopyStuff("Program Files (x86)/RivaTuner Statistics Server/Plugins/Client/Overlays/_details.ovl")
 CopyStuff("Program Files (x86)/RivaTuner Statistics Server/Plugins/Client/Overlays/_fps.ovl")
+CopyStuff("Program Files (x86)/RivaTuner Statistics Server/Plugins/Client/Overlays/_empty.ovl")
+CopyStuff("Program Files (x86)/RivaTuner Statistics Server/Plugins/Client/HotkeyHandler.cfg")
+CopyStuff("Program Files (x86)/RivaTuner Statistics Server/Plugins/Client/OverlayEditor.cfg")
 CopyStuff("Program Files/GrafanaLabs/grafana/data/grafana.db")
 

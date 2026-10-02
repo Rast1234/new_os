@@ -38,3 +38,41 @@ Device- and machine-specific drivers should be installed on a corresponding mach
 * rider settings
 * display modes control?
 * LLT/HWinfo/RTSS startup order or delay?
+* openal eax hrtf
+* paint.net plugin pack
+* wifi export-import
+* useful start shortcuts
+* userprofile script to bin, make auto-admin runnable, maybe just compile exe?
+
+
+### TODO add gpedit
+
+ADD GPEDIT TO WIN HOME:
+
+Get-ChildItem @(
+    "C:\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package*.mum",
+    "C:\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensions-Package*.mum"
+) | ForEach-Object { dism.exe /online /norestart /add-package:"$_" }
+
+### TODO wifi
+
+$challenge = Read-Host "Export(1) or Import(2)?"
+if ($challenge -eq "1") {
+  New-Item -Path '.\wifi' -ItemType Directory
+
+  $ProfileList = Invoke-Expression -Command 'netsh wlan show profile'
+  $ProfileList | ForEach-Object -Process {
+    $matches = $null
+    $null = $PSItem -match ': (?<ProfileName>.*)$'
+    if ($matches) {
+      netsh wlan export profile $matches.ProfileName key=clear folder='.\wifi'
+    }
+  }
+} elseif ($challenge -eq "1") {
+  $XmlDirectory = '.\wifi'
+  Get-ChildItem $XmlDirectory | Where-Object {$_.extension -eq '.xml'} | ForEach-Object {
+    netsh wlan add profile filename=($XmlDirectory + '\' + $_.name)
+  }
+}
+
+### 

@@ -65,4 +65,8 @@ foreach ($task in $tasks) {
 echo "=== install NSSM-managed services ==="
 ./nssm.ps1
 
+echo "=== Install JustTheBrowser policies for Chrome ==="
+Invoke-WebRequest "https://raw.githubusercontent.com/corbindavenport/just-the-browser/main/chrome/install.reg" -OutFile "$env:LocalAppData\chrome.reg"
+reg import "$env:LocalAppData\chrome.reg"
+
 echo "=== Done! ==="

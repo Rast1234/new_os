@@ -6,3 +6,4 @@ Update-Help # will fail some modules, its OK
 winget update --all --accept-source-agreements --accept-package-agreements
 # NOTE: will open window
 winget install XKaguya.LenovoLegionToolkit  --accept-source-agreements --accept-package-agreements
+winget install Guru3D.RTSS  --accept-source-agreements --accept-package-agreements

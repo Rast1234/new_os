@@ -5,4 +5,5 @@ Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FlyoutMenuSettings]
 "ShowSleepOption"=dword:0000000
+"ShowLockOption"=dword:0000000
 "ShowHibernateOption"=dword:00000001

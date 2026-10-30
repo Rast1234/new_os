@@ -1,4 +1,6 @@
 Install-PackageProvider NuGet -Force
+Install-Module Microsoft.WinGet.Client -Force -Repository PSGallery
+Repair-WinGetPackageManager
 Install-Module PSWindowsUpdate -Force
 Update-Help # will fail some modules, its OK
 
